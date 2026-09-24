@@ -8,8 +8,6 @@
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
-    "verify:content": "node scripts/verify-content.mjs",
-    "verify:site": "node scripts/verify-site.mjs",
     "preview": "serve .output/public",
     "test:e2e": "playwright test"
   },
