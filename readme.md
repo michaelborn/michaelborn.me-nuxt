@@ -81,22 +81,4 @@ pages. Post descriptions are derived from their Markdown by Nuxt Content.
 - `/tags/index.xml` and `/tags/<tag>/index.xml`
 
 Feeds contain published articles with summaries, stable permalink GUIDs, original
-publication dates, and categories. No running application server is needed to serve
-the generated output.
-
-## Migration handoff
-
-Implementation stops after the content, routes, SEO, and feeds are functional.
-The next step is a human review of the minimal black-on-white template and then
-collaborative UI iteration.
-
-All 45 post/archive/tag URLs from the old local Hugo sitemap are preserved.
-The TypeScript post and its `javascript` and `typescript` tag pages are now included.
-Hugo's empty `/categories/` page is not carried over. External images retain their
-existing remote URLs; the local checks verify references, not remote availability.
-
-`netlify.toml` is configured for Nuxt: build command `npm run generate`, publish
-directory `.output/public`, Node.js 24.20.0, and the existing non-`www` to `www`
-redirect. Netlify deployment remains manual: push the commits, review the deploy
-preview, and publish the production cutover when ready. No commits have been
-pushed and no hosted deployment or cutover has been performed.
+publication dates, and categories.
