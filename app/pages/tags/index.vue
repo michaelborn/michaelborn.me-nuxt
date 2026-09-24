@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { data: posts } = await usePosts()
 const tags = computed(() => [...new Set((posts.value ?? []).flatMap(post => post.tags))].sort())
+usePageSeo({ title: 'Tags', description: 'Browse articles by topic on Developer Distinction.' })
 </script>
 
 <template>

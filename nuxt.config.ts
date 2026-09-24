@@ -1,4 +1,5 @@
 import { readPosts } from './lib/content'
+import { site } from './shared/site'
 
 const publishedPosts = readPosts().filter(post => post.published)
 const tags = [...new Set(publishedPosts.flatMap(post => post.tags))].sort()
@@ -22,18 +23,19 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en-US' },
-      title: 'Developer Distinction',
+      title: site.title,
       meta: [
         {
           name: 'description',
-          content: 'Articles by full-stack software engineer Michael Born.',
+          content: site.description,
         },
       ],
+      link: [{ rel: 'alternate', type: 'application/rss+xml', title: site.title, href: '/index.xml' }],
     },
   },
   runtimeConfig: {
     public: {
-      siteUrl: 'https://www.michaelborn.me',
+      siteUrl: site.url,
     },
   },
   nitro: {
@@ -44,6 +46,9 @@ export default defineNuxtConfig({
         '/', '/posts/', '/tags/',
         ...publishedPosts.map(post => post.path),
         ...tags.map(tag => `/tags/${tag}/`),
+        '/index.xml', '/posts/index.xml', '/tags/index.xml',
+        '/sitemap.xml', '/robots.txt',
+        ...tags.map(tag => `/tags/${tag}/index.xml`),
       ],
     },
   },

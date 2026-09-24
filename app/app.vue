@@ -6,6 +6,7 @@
         <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/posts/">Posts</NuxtLink>
         <NuxtLink to="/tags/">Tags</NuxtLink>
+        <a href="/index.xml">RSS</a>
       </nav>
     </header>
 

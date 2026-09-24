@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { data: posts } = await usePosts()
+usePageSeo({ title: 'Developer Distinction' })
 </script>
 
 <template>

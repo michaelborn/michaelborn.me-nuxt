@@ -8,6 +8,8 @@ const matchingPosts = computed(() => (posts.value ?? []).filter(post => post.tag
 if (!matchingPosts.value.length) {
   throw createError({ statusCode: 404, statusMessage: 'Tag not found', fatal: true })
 }
+
+usePageSeo({ title: `Posts tagged “${tag}”`, description: `Articles about ${tag} by Michael Born.` })
 </script>
 
 <template>

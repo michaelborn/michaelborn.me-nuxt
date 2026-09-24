@@ -8,6 +8,13 @@ const { data: post } = await useAsyncData(`post:${route.params.slug}`, () =>
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
+
+usePageSeo({
+  title: post.value.title,
+  description: post.value.description,
+  publishedAt: post.value.date,
+  tags: post.value.tags,
+})
 </script>
 
 <template>
