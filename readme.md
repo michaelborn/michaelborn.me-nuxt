@@ -38,16 +38,11 @@ downloadable content database. Scheduled posts need a new build after their
 publication time. Restart `npm run dev` after changing draft status or publication
 dates so the collection's inclusion rules are recalculated.
 
-Run `npm run verify:content` to compare the migrated posts with the original Hugo
-baseline. This migration-only check is expected to change once articles are edited.
-
 ## Local checks
 
 ```bash
 npm run typecheck
-npm run verify:content
 npm run generate
-npm run verify:site
 npx playwright install chromium
 npm run test:e2e
 ```
@@ -57,8 +52,6 @@ internal links and anchors, code examples, image references, and the static 404.
 Browser checks exercise navigation, hydration, a mobile viewport, and unknown URLs.
 The same verification checks canonical/Open Graph metadata, XML validity,
 sitemap coverage, robots, and the root, archive, and per-tag RSS feeds.
-If an old Hugo sitemap is available, compare URLs with
-`npm run verify:site -- public/sitemap.xml` (the sitemap is not needed for normal builds).
 
 The same checks run in GitHub Actions on pushes and pull requests to `main`
 (see `.github/workflows/build.yml`).
@@ -67,9 +60,7 @@ Two broken article links were corrected during migration: the relative Hibernate
 article link in `redirecting-hibernate-logs.md` and the missing HTTPS scheme in
 `localizing-dates-mssql.md`. Article prose is otherwise preserved.
 
-Source assets belong in `static/`. The old ignored Hugo `public/` directory is not
-used by Nuxt. The former theme checkout may remain locally under ignored `themes/`,
-but the application no longer depends on it or on Git submodules.
+Source assets belong in `static/`.
 
 ## SEO and feeds
 
