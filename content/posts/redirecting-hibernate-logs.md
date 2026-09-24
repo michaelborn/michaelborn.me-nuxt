@@ -1,9 +1,9 @@
-+++
-date = '2021-08-30T16:13:57-04:00'
-tags = [ 'cfml', 'coldfusion', 'hibernate', 'log4j' ]
-draft = false
-title = 'Redirecting Hibernate Logs to the CommandBox Console'
-+++
+---
+date: '2021-08-30T16:13:57-04:00'
+tags: [ 'cfml', 'coldfusion', 'hibernate', 'log4j' ]
+draft: false
+title: 'Redirecting Hibernate Logs to the CommandBox Console'
+---
 
 In my last blog post, I covered [how to adjust the Hibernate log level with Log4j](hibernate-logger-concurrent-exception.md).
 

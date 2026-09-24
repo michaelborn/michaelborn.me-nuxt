@@ -1,9 +1,9 @@
-+++
-date = '2019-05-07T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'beginners' ]
-draft = false
-title = "Five Reasons to Learn CF in 2019"
-+++
+---
+date: '2019-05-07T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'beginners' ]
+draft: false
+title: "Five Reasons to Learn CF in 2019"
+---
 
 I am happy to present Five Reasons to Learn CF in 2019. I'm trying to be honest here, but you _may_ find some bias because *I love ColdFusion*. There, I confessed. Read on!
 

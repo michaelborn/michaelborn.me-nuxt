@@ -1,9 +1,9 @@
-+++
-date = '2019-08-14T16:13:57-04:00'
-tags = [ 'coldfusion', 'lucee', 'cfml', 'cfscript' ]
-draft = false
-title = "Form Processing in CFScript Part Three: Sending Email Notifications"
-+++
+---
+date: '2019-08-14T16:13:57-04:00'
+tags: [ 'coldfusion', 'lucee', 'cfml', 'cfscript' ]
+draft: false
+title: "Form Processing in CFScript Part Three: Sending Email Notifications"
+---
 
 In this series so far, we've looked at how to validate a form entry and how to save that form entry to the database. Today we'll see how we can notify a person (usually a site admin or editor) that a new form entry has been submitted and processed by simply sending an email.
 

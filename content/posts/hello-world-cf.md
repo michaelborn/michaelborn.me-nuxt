@@ -1,9 +1,9 @@
-+++
-date = '2019-03-28T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'beginners', 'commandbox' ]
-draft = false
-title = "Five Reasons to Learn CF in 2019"
-+++
+---
+date: '2019-03-28T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'beginners', 'commandbox' ]
+draft: false
+title: "Five Reasons to Learn CF in 2019"
+---
 
 Now that you've read my [Why Coldfusion?](https://dev.to/mikeborn/why-cf-3jal) post (you HAVE, right?), let's do a simple Hello World just to try some sample CF code.
 

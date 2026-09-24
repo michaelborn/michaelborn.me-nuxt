@@ -1,9 +1,9 @@
-+++
-date = '2022-09-21T16:13:57-04:00'
-tags = [ 'cfml', 'coldfusion', 'java' ]
-draft = false
-title = 'How to Get the Version of Any Java Package from CFML'
-+++
+---
+date: '2022-09-21T16:13:57-04:00'
+tags: [ 'cfml', 'coldfusion', 'java' ]
+draft: false
+title: 'How to Get the Version of Any Java Package from CFML'
+---
 
 The [Apache POI library](https://poi.apache.org/) is an awesome tool for messing with spreadsheets. You can read spreadsheet data, get header rows, total row count, all sorts of wacky stuff. Julian Halliwell's excellent [spreadsheet-cfml library](https://github.com/cfsimplicity/spreadsheet-cfml) uses it to great effect.
 

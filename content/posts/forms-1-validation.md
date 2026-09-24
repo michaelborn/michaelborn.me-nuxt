@@ -1,9 +1,9 @@
-+++
-date = '2019-07-23T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfscript', 'cfml', 'validation' ]
-draft = false
-title = "Form Processing in CFScript Part One: Form Validation"
-+++
+---
+date: '2019-07-23T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfscript', 'cfml', 'validation' ]
+draft: false
+title: "Form Processing in CFScript Part One: Form Validation"
+---
 
 This series will teach you how to process form submissions using ColdFusion's CFScript syntax. In Part One I'll show you the basics of validating form submissions on the backend!
 

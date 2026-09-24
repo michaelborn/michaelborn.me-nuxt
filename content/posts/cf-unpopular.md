@@ -1,9 +1,9 @@
-+++
-date = '2019-05-23T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'legacy' ]
-draft = false
-title = "Yes, ColdFusion is 'Unpopular'. No, I don't care."
-+++
+---
+date: '2019-05-23T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'legacy' ]
+draft: false
+title: "Yes, ColdFusion is 'Unpopular'. No, I don't care."
+---
 
 It’s popular to hate on CF. It’s popular to say ColdFusion is "dying". It’s popular to call CF a "legacy" language, and compare it to COBOL. But is ColdFusion _really_ unpopular? And, more important… *does it matter*?
 

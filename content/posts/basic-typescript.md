@@ -1,9 +1,9 @@
-+++
-date = '2026-09-02T16:13:57-04:00'
-tags = [ 'javascript', 'typescript' ]
-draft = false
-title = "Basic Typescript"
-+++
+---
+date: '2026-09-02T16:13:57-04:00'
+tags: [ 'javascript', 'typescript' ]
+draft: false
+title: "Basic Typescript"
+---
 
 I recently began taking a simple Typescript course, and I thought I'd share my notes here in blog form. Typescript, if you've been living under a rock, is a Javascript superset which implements strict typing and transpiles to normal Javascript. Utilizing strict typing gives developers much better tooling for catching typing errors sooner in the development cycle.
 

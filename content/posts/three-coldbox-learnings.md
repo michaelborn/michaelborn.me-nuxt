@@ -1,9 +1,9 @@
-+++
-date = '2019-12-18T16:13:57-04:00'
-tags = [ 'cfml', 'coldfusion', 'coldbox' ]
-draft = false
-title = 'Three ColdBox Features I Learned While Building A URL Shortener'
-+++
+---
+date: '2019-12-18T16:13:57-04:00'
+tags: [ 'cfml', 'coldfusion', 'coldbox' ]
+draft: false
+title: 'Three ColdBox Features I Learned While Building A URL Shortener'
+---
 
 Last night I did another live-stream where I finished the first draft of a URL shortener I'm calling "cfShorty". During live-streams I typically end up searching the ColdBox docs for help, but this time [Gavin Pickin](https://twitter.com/gpickin) watched and commented with some cool tips, most of which I'd never used before.
 

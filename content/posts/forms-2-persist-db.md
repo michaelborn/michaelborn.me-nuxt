@@ -1,9 +1,9 @@
-+++
-date = '2019-08-01T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfscript', 'cfml', 'mysql' ]
-draft = false
-title = "Form Processing in CFScript Part Two: Saving Form Entries to the Database"
-+++
+---
+date: '2019-08-01T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfscript', 'cfml', 'mysql' ]
+draft: false
+title: "Form Processing in CFScript Part Two: Saving Form Entries to the Database"
+---
 
 If a tree falls in a woods with no one to hear, did it actually fall? Likewise, if a user submits a form but it is not persisted in some form, that form submission is **worthless**.
 

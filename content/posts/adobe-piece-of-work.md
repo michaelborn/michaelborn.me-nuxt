@@ -1,9 +1,9 @@
-+++
-date = '2019-09-23T16:13:57-04:00'
-tags = [ 'cfml', 'coldfusion', 'lucee', 'webdev' ]
-draft = false
-title = "Adobe, You Piece of Work, I'm Through"
-+++
+---
+date: '2019-09-23T16:13:57-04:00'
+tags: [ 'cfml', 'coldfusion', 'lucee', 'webdev' ]
+draft: false
+title: "Adobe, You Piece of Work, I'm Through"
+---
 
 > When in the course of human events it becomes necessary for one [developer] to dissolve the bands which have connected them with [Adobe].
 

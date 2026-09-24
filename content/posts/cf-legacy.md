@@ -1,9 +1,9 @@
-+++
-date = '2019-06-03T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'legacy' ]
-draft = false
-title = "CF: A Legacy of Legacy"
-+++
+---
+date: '2019-06-03T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'legacy' ]
+draft: false
+title: "CF: A Legacy of Legacy"
+---
 
 I've seen a lot of discussions revolving around ColdFusion and whether it is inherently a "legacy" language. There are dozens of blog posts proclaiming the death of the language, and every comment seems to share a story about just how "legacy" CF is. Today, I'd like to look closely at _why_ so many dare to call us a legacy language, and what we can do about that.
 

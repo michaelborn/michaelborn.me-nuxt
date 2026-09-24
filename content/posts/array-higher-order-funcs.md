@@ -1,9 +1,9 @@
-+++
-date = '2019-05-07T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'lucee', 'lambdas' ]
-draft = false
-title = "Using ArraySome and ArrayEvery Higher-Order Functions in Lucee"
-+++
+---
+date: '2019-05-07T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'lucee', 'lambdas' ]
+draft: false
+title: "Using ArraySome and ArrayEvery Higher-Order Functions in Lucee"
+---
 
 In this post I'm going to take two *Lucee only* higher-order array functions, `arraySome()` and `arrayEvery()`, and explain their use and purpose. I'll also review the concept of a higher-order function, as well as the Super Cool (yet very little used) lambda expression available in Lucee 5.
 

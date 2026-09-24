@@ -1,9 +1,9 @@
-+++
-date = '2019-08-20T16:13:57-04:00'
-tags = [ 'sql', 'localization' ]
-draft = false
-title = "Localizing Dates In Sql Server"
-+++
+---
+date: '2019-08-20T16:13:57-04:00'
+tags: [ 'sql', 'localization' ]
+draft: false
+title: "Localizing Dates In Sql Server"
+---
 
 Several months ago I added timezone handling to a CF app. This post is my best effort to document how to localize dates using MSSQL timezone functionality.
 

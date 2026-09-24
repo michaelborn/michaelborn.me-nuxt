@@ -1,9 +1,9 @@
-+++
-date = '2019-03-20T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'beginners' ]
-draft = false
-title = "Why I Program in Coldfusion"
-+++
+---
+date: '2019-03-20T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'beginners' ]
+draft: false
+title: "Why I Program in Coldfusion"
+---
 
 I get asked this a bunch. _Why are you programming in Coldfusion, anyway?_ Isn't Coldfusion [_dead_](https://mrphilmunro.wordpress.com/2014/05/05/is-coldfusion-dead/)? Isn't it _closed-source_? Isn't it _expensive_?
 

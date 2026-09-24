@@ -1,9 +1,9 @@
-+++
-date = '2021-08-12T16:13:57-04:00'
-tags = [ 'cfml', 'coldfusion', 'hibernate', 'orm' ]
-draft = false
-title = 'Cross-engine transaction detection in Hibernate v3+'
-+++
+---
+date: '2021-08-12T16:13:57-04:00'
+tags: [ 'cfml', 'coldfusion', 'hibernate', 'orm' ]
+draft: false
+title: 'Cross-engine transaction detection in Hibernate v3+'
+---
 
 ### UPDATE: Now with Adobe support!
 

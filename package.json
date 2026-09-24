@@ -7,12 +7,15 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "verify:content": "node scripts/verify-content.mjs"
   },
   "dependencies": {
     "@nuxt/content": "3.16.1",
     "better-sqlite3": "13.0.3",
-    "nuxt": "4.5.2"
+    "gray-matter": "^4.0.3",
+    "nuxt": "4.5.2",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

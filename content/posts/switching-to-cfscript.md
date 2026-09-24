@@ -1,9 +1,9 @@
-+++
-date = '2019-06-26T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'cfscript' ]
-draft = false
-title = "Switching from Tag to Script"
-+++
+---
+date: '2019-06-26T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'cfscript' ]
+draft: false
+title: "Switching from Tag to Script"
+---
 
 # Switching from Tag to Script
 

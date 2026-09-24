@@ -1,9 +1,9 @@
-+++
-date = '2019-07-08T16:13:57-04:00'
-tags = [ 'coldfusion', 'lucee', 'cfml', 'sql' ]
-draft = false
-title = "Storing and Using DateTimeOffsets in Lucee"
-+++
+---
+date: '2019-07-08T16:13:57-04:00'
+tags: [ 'coldfusion', 'lucee', 'cfml', 'sql' ]
+draft: false
+title: "Storing and Using DateTimeOffsets in Lucee"
+---
 
 Recently at [Impelos](https://impelos.com/) I began storing dates using SQL Server's [DateTimeOffset](https://docs.microsoft.com/en-us/sql/t-sql/data-types/datetimeoffset-transact-sql?view=sql-server-2017) field, which allows us to store a date and time **with embedded UTC offset**. Unfortunately, I ran into several issues with Lucee's support for the data type.
 

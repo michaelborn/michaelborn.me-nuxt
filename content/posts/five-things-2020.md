@@ -1,9 +1,9 @@
-+++
-date = '2020-01-13T16:13:57-04:00'
-tags = [ '2020', 'cfml', 'coldfusion', 'contentbox' ]
-draft = false
-title = "Five Things I'd Like To Learn in 2020"
-+++
+---
+date: '2020-01-13T16:13:57-04:00'
+tags: [ '2020', 'cfml', 'coldfusion', 'contentbox' ]
+draft: false
+title: "Five Things I'd Like To Learn in 2020"
+---
 
 ## One: How to Debug Slow Execution Times In FusionReactor
 

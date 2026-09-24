@@ -1,9 +1,9 @@
-+++
-date = '2019-06-28T16:13:57-04:00'
-tags = [ 'coldfusion', 'cfml', 'cfscript' ]
-draft = false
-title = "CFScript Gotchas and Syntax Guides"
-+++
+---
+date: '2019-06-28T16:13:57-04:00'
+tags: [ 'coldfusion', 'cfml', 'cfscript' ]
+draft: false
+title: "CFScript Gotchas and Syntax Guides"
+---
 
 Now, script syntax is *usually* straightforward, but as with any language, sometimes it's easy to get confused over certain things in script syntax. In this post I'll cover a quick list of common "gotchas" in CFScript, document the proper syntax for each, and finally link to a list of CFScript guides which may help you start writing CFScript today.
 

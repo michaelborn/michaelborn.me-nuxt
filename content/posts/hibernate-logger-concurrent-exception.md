@@ -1,9 +1,9 @@
-+++
-date = '2021-08-19T16:13:57-04:00'
-tags = [ 'cfml', 'coldfusion', 'hibernate', 'orm' ]
-draft = false
-title = 'Resolving Concurrent Exceptions in Hibernate Logger'
-+++
+---
+date: '2021-08-19T16:13:57-04:00'
+tags: [ 'cfml', 'coldfusion', 'hibernate', 'orm' ]
+draft: false
+title: 'Resolving Concurrent Exceptions in Hibernate Logger'
+---
 
 Recently while working on a Hibernate ORM project, I ran into an interesting issue when an entity with relationships is saved inside a transaction.
 
