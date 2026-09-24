@@ -62,4 +62,4 @@ SWITCHOFFSET(
 
 ## Conclusion
 
-Unfortunately, this is not a full timezone localization writeup. Localization is very complex, and [the more I learn the less I know](julianstodd.wordpress.com/2011/12/21/the-more-i-learn-the-less-i-know-learning-about-ignorance/). But hopefully this brief overview of timezone handling using built-in MSSQL functionality will come in useful for *someone* - enjoy!
+Unfortunately, this is not a full timezone localization writeup. Localization is very complex, and [the more I learn the less I know](https://julianstodd.wordpress.com/2011/12/21/the-more-i-learn-the-less-i-know-learning-about-ignorance/). But hopefully this brief overview of timezone handling using built-in MSSQL functionality will come in useful for *someone* - enjoy!

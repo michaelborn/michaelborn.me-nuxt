@@ -16,6 +16,8 @@ npm run dev
 ```
 
 Generate the static production output with `npm run generate`.
+Run `npm run preview` to serve `.output/public` locally.
+Use Node.js 22.18+ (verified with Node.js 24.20).
 
 ## Writing posts
 
@@ -38,3 +40,26 @@ dates so the collection's inclusion rules are recalculated.
 
 Run `npm run verify:content` to compare the migrated posts with the original Hugo
 baseline. This migration-only check is expected to change once articles are edited.
+
+## Local checks
+
+```bash
+npm run typecheck
+npm run verify:content
+npm run generate
+npm run verify:site
+npx playwright install chromium
+npm run test:e2e
+```
+
+The generated-site check covers every post and tag, chronological listings,
+internal links and anchors, code examples, image references, and the static 404.
+Browser checks exercise navigation, hydration, a mobile viewport, and unknown URLs.
+
+Two broken article links were corrected during migration: the relative Hibernate
+article link in `redirecting-hibernate-logs.md` and the missing HTTPS scheme in
+`localizing-dates-mssql.md`. Article prose is otherwise preserved.
+
+Source assets belong in `static/`. The old ignored Hugo `public/` directory is not
+used by Nuxt. The former theme checkout may remain locally under ignored `themes/`,
+but the application no longer depends on it or on Git submodules.

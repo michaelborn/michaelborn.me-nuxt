@@ -27,7 +27,22 @@ a {
 pre {
   overflow-x: auto;
   padding: 1rem;
-  background: #f4f4f4;
+  border: 1px solid;
+  background: #fff;
+}
+
+pre code span {
+  color: inherit !important;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.post-list li {
+  margin-bottom: 0.75rem;
 }
 
 img {

@@ -1,3 +1,8 @@
+import { readPosts } from './lib/content'
+
+const publishedPosts = readPosts().filter(post => post.published)
+const tags = [...new Set(publishedPosts.flatMap(post => post.tags))].sort()
+
 export default defineNuxtConfig({
   modules: ['@nuxt/content'],
   css: ['~/assets/css/main.css'],
@@ -33,6 +38,14 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'static',
+    prerender: {
+      failOnError: true,
+      routes: [
+        '/', '/posts/', '/tags/',
+        ...publishedPosts.map(post => post.path),
+        ...tags.map(tag => `/tags/${tag}/`),
+      ],
+    },
   },
   compatibilityDate: '2026-09-23',
 })

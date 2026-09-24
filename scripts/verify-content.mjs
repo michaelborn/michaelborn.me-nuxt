@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
-import { readPosts } from '../lib/content.mjs'
+import { readPosts } from '../lib/content.ts'
 
 // Verify migration fidelity against the original Hugo snapshot, not a second copy.
 const baseline = '4cc0dbe'
@@ -15,7 +15,10 @@ for (const file of files) {
   const post = posts.find(post => `content/posts/${post.file}` === file)
   assert.ok(post, `Missing migrated post: ${file}`)
   // Text patches normalize the final newline; the article itself must be identical.
-  assert.equal(post.content.replace(/\n$/, ''), body.replace(/\n$/, ''), `Markdown changed: ${file}`)
+  const correctedBody = body
+    .replace('](hibernate-logger-concurrent-exception.md)', '](/posts/hibernate-logger-concurrent-exception/)')
+    .replace('](julianstodd.wordpress.com/', '](https://julianstodd.wordpress.com/')
+  assert.equal(post.content.replace(/\n$/, ''), correctedBody.replace(/\n$/, ''), `Markdown changed: ${file}`)
   // Original frontmatter contains simple quoted strings, arrays and booleans.
   for (const key of ['title', 'date', 'tags', 'draft']) {
     const value = frontmatter.match(new RegExp(`^${key} = (.+)$`, 'm'))[1]
@@ -26,4 +29,4 @@ for (const file of files) {
   }
 }
 
-console.log(`Verified ${posts.length} posts: original filenames, metadata, and Markdown bodies preserved.`)
+console.log(`Verified ${posts.length} posts: original filenames, metadata, and Markdown preserved (two documented link corrections).`)

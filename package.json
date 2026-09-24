@@ -8,7 +8,10 @@
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
-    "verify:content": "node scripts/verify-content.mjs"
+    "verify:content": "node scripts/verify-content.mjs",
+    "verify:site": "node scripts/verify-site.mjs",
+    "preview": "serve .output/public",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@nuxt/content": "3.16.1",
@@ -18,10 +21,14 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2",
+    "cheerio": "^1.2.0",
+    "serve": "^14.2.6",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.1.0"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.18.0"
   }
 }

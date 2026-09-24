@@ -1,5 +1,5 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content'
-import { postSchema, readPosts } from './lib/content.mjs'
+import { postSchema, readPosts } from './lib/content'
 
 export default defineContentConfig({
   collections: {

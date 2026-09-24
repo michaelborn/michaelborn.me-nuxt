@@ -9,6 +9,8 @@
 /.output/
 /dist
 /.data/
+/test-results/
+/playwright-report/
 
 # Dependencies and local environment
 /node_modules/

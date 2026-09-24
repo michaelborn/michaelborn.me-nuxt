@@ -5,7 +5,7 @@ draft: false
 title: 'Redirecting Hibernate Logs to the CommandBox Console'
 ---
 
-In my last blog post, I covered [how to adjust the Hibernate log level with Log4j](hibernate-logger-concurrent-exception.md).
+In my last blog post, I covered [how to adjust the Hibernate log level with Log4j](/posts/hibernate-logger-concurrent-exception/).
 
 This helped us avoid a concurrent modification exception due to logging certain database entities with the `DEBUG` logger, but it also sets us up for further interaction with log4j configuration. This week we're going a step farther to take all log4j messages emitted by the HIbernate logger and redirect them to the console. This console is what is shown when you run `box server log --follow` in CommandBox.
 
