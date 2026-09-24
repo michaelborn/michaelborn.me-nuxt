@@ -2,11 +2,13 @@
 /public/
 /resources/
 /.hugo_build.lock
+/themes/
 
 # Nuxt generated output
 /.nuxt/
 /.output/
-/dist/
+/dist
+/.data/
 
 # Dependencies and local environment
 /node_modules/

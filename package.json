@@ -1,0 +1,24 @@
+{
+  "name": "michaelborn-me",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@nuxt/content": "3.16.1",
+    "better-sqlite3": "13.0.3",
+    "nuxt": "4.5.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

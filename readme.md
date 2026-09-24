@@ -4,6 +4,15 @@
 
 Live View @ [michaelborn.me](https://michaelborn.me/)
 
-* CMS: [Hugo](https://gohugo.io/)
-* Theme: [hugo-blog-awesome](https://themes.gohugo.io/themes/hugo-blog-awesome/)
+* Framework: [Nuxt](https://nuxt.com/)
+* Content: [Nuxt Content](https://content.nuxt.com/)
 * Hosted at [Netlify](https://netlify.com)
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+Generate the static production output with `npm run generate`.

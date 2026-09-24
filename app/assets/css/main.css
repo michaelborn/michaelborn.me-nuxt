@@ -1,0 +1,36 @@
+:root {
+  color: #000;
+  background: #fff;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+.site-shell {
+  box-sizing: border-box;
+  width: min(100% - 2rem, 48rem);
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+a {
+  color: inherit;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: #f4f4f4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
