@@ -60,6 +60,9 @@ sitemap coverage, robots, and the root, archive, and per-tag RSS feeds.
 If an old Hugo sitemap is available, compare URLs with
 `npm run verify:site -- public/sitemap.xml` (the sitemap is not needed for normal builds).
 
+The same checks run in GitHub Actions on pushes and pull requests to `main`
+(see `.github/workflows/build.yml`).
+
 Two broken article links were corrected during migration: the relative Hibernate
 article link in `redirecting-hibernate-logs.md` and the missing HTTPS scheme in
 `localizing-dates-mssql.md`. Article prose is otherwise preserved.
