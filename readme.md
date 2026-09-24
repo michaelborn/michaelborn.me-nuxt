@@ -95,8 +95,8 @@ The TypeScript post and its `javascript` and `typescript` tag pages are now incl
 Hugo's empty `/categories/` page is not carried over. External images retain their
 existing remote URLs; the local checks verify references, not remote availability.
 
-Netlify configuration and deployment are manual-only follow-ups. `netlify.toml`
-still contains the original Hugo build settings and non-`www` to `www` redirect.
-The site owner will need to update the build command to `npm run generate`, publish
-directory to `.output/public`, and select a compatible Node version during Step 7.
-No commits have been pushed and no hosted deployment or cutover has been performed.
+`netlify.toml` is configured for Nuxt: build command `npm run generate`, publish
+directory `.output/public`, Node.js 24.20.0, and the existing non-`www` to `www`
+redirect. Netlify deployment remains manual: push the commits, review the deploy
+preview, and publish the production cutover when ready. No commits have been
+pushed and no hosted deployment or cutover has been performed.

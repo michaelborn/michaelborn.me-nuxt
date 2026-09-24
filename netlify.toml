@@ -1,9 +1,9 @@
 [build]
-  command = "hugo"
-  publish = "public"
+  command = "npm run generate"
+  publish = ".output/public"
 
 [build.environment]
-  HUGO_VERSION = "0.145.0"
+  NODE_VERSION = "24.20.0"
 
 [[redirects]]
 from = "https://michaelborn.me/*"
