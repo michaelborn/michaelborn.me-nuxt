@@ -1,0 +1,13 @@
+baseURL = 'https://www.michaelborn.me'
+languageCode = 'en-us'
+title = 'Developer Distinction'
+# https://themes.gohugo.io/themes/hugo-blog-awesome/
+theme = "hugo-blog-awesome"
+
+[params]
+  [params.author]
+#    avatar = 'assets/avatar.jpg'
+    intro = 'Developer Distinction'
+    name = 'Michael Born'
+    email = 'michaelborn@duck.com'
+    description = "Fullstack software engineer. When I'm not debating the finer points of software development, I can be found pedaling furiously along a winding country road."

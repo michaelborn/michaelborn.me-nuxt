@@ -1,0 +1,19 @@
+# Hugo generated output
+/public/
+/resources/
+/.hugo_build.lock
+
+# Nuxt generated output
+/.nuxt/
+/.output/
+/dist/
+
+# Dependencies and local environment
+/node_modules/
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.DS_Store
+*.swp
