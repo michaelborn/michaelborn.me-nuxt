@@ -60,6 +60,10 @@ Use Node.js 22.18+.
 - Dark mode relies on `@nuxtjs/color-mode` adding `.dark` to `<html>`. The
   variant is configured in `main.css`:
   `@custom-variant dark (&:where(.dark, .dark *));`.
+- Shiki's dual-theme variables are injected inline per code block by Nuxt
+  Content, not in `main.css`. The light variable is `--shiki-default` (named
+  after the theme key in `nuxt.config.ts`), not `--shiki-light`. The variables
+  only exist on `.shiki` elements — never apply them to `html` or `body`.
 - After changing a post's `draft` status or publication `date`, restart the dev
   server so Nuxt Content recalculates collection inclusion.
 - `npm run generate` prerenders server routes including RSS and sitemap XML;

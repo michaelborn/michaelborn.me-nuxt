@@ -1,4 +1,4 @@
-export function usePosts() {
+export function allPosts() {
   return useAsyncData('published-posts', async () => {
     const posts = await queryCollection('posts')
       .select('path', 'title', 'date', 'tags', 'description')

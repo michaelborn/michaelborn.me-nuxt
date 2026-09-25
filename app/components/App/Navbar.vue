@@ -1,19 +1,22 @@
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
 const items = [
-  { name: 'Home', path: '/', icon: 'solar:home-smile-outline' },
-  { name: 'Posts', path: '/posts/', icon: 'solar:document-text-outline' },
-  { name: 'Tags', path: '/tags/', icon: 'solar:hashtag-outline' },
-]
+  { name: "Home", path: "/", icon: "solar:home-smile-outline" },
+  { name: "Posts", path: "/posts/", icon: "solar:document-text-outline" },
+  { name: "Tags", path: "/tags/", icon: "solar:hashtag-outline" },
+];
 
-const stripSlash = (path: string) => path.replace(/\/$/, '') || '/'
-const isActive = (path: string) => stripSlash(route.path) === stripSlash(path)
+const stripSlash = (path: string) => path.replace(/\/$/, "") || "/";
+const isActive = (path: string) => stripSlash(route.path) === stripSlash(path);
 </script>
 
 <template>
   <div class="fixed top-0 z-50 w-full">
-    <nav aria-label="Main navigation" class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <nav
+      aria-label="Main navigation"
+      class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"
+    >
       <ul
         class="my-4 flex items-center rounded-full bg-white/90 px-3 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur dark:bg-gray-800/90 dark:text-gray-200 dark:ring-white/20"
       >
@@ -22,7 +25,9 @@ const isActive = (path: string) => stripSlash(route.path) === stripSlash(path)
             :to="item.path"
             :title="item.name"
             class="relative flex items-center justify-center px-3 py-4 transition hover:text-primary-500 dark:hover:text-primary-400"
-            :class="{ 'text-primary-600 dark:text-primary-400': isActive(item.path) }"
+            :class="{
+              'text-primary-600 dark:text-primary-400': isActive(item.path),
+            }"
           >
             <Icon aria-hidden="true" :name="item.icon" class="z-10 h-5 w-5" />
             <span

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: posts } = await usePosts()
+const { data: posts } = await allPosts()
 const tags = computed(() => [...new Set((posts.value ?? []).flatMap(post => post.tags))].sort())
 const countFor = (tag: string) => (posts.value ?? []).filter(post => post.tags.includes(tag)).length
 usePageSeo({ title: 'Tags', description: 'Browse articles by topic on Developer Distinction.' })
