@@ -5,11 +5,15 @@ usePageSeo({ title: 'All posts', description: 'Browse every article by Michael B
 </script>
 
 <template>
-  <section>
-    <h1>All posts</h1>
-    <section v-for="year in years" :key="year">
-      <h2>{{ year }}</h2>
+  <div>
+    <AppHeader
+      class="mb-16"
+      title="All posts"
+      description="Every article I've written, collected in reverse chronological order."
+    />
+    <section v-for="year in years" :key="year" class="mb-16 last:mb-0">
+      <h2 class="mb-6 text-xs font-semibold uppercase text-gray-400">{{ year }}</h2>
       <PostList :posts="(posts ?? []).filter(post => post.date.startsWith(year))" />
     </section>
-  </section>
+  </div>
 </template>

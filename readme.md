@@ -62,6 +62,22 @@ article link in `redirecting-hibernate-logs.md` and the missing HTTPS scheme in
 
 Source assets belong in `static/`.
 
+## Tips and gotchas
+
+- Tailwind classes used on `<html>` or `<body>` should be declared in `app.vue`
+  via `useHead()` (or in the CSS itself), not in `nuxt.config.ts` `app.head`.
+  Tailwind v4 does not reliably scan `nuxt.config.ts`, so utilities such as
+  `dark:bg-black` can be dropped from the production CSS if they only appear
+  there.
+- Dark mode is handled by `@nuxtjs/color-mode`, which adds the `.dark` class to
+  `<html>`. The class-based variant is configured in
+  `app/assets/css/main.css` with `@custom-variant dark (&:where(.dark, .dark *));`.
+- The theme toggle is `app/components/App/ThemeToggle.vue`.
+- Restart `npm run dev` after changing post draft status or publication dates so
+  the Nuxt Content collection rules are recalculated.
+- Always run `npm run generate` and `npm run test:e2e` before deploying; the
+  static build catches broken internal links, missing images, and RSS/XML errors.
+
 ## SEO and feeds
 
 Site identity is configured in `shared/site.ts`. Each page emits an absolute

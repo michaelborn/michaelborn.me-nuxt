@@ -19,11 +19,20 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.97",
+    "@iconify-json/solar": "^1.2.12",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/icon": "^2.5.1",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@playwright/test": "^1.63.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.6.2",
     "cheerio": "^1.2.0",
     "fast-xml-parser": "^5.11.1",
     "serve": "^14.2.6",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.1.0"
   },

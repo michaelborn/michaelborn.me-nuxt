@@ -1,9 +1,3 @@
-# Hugo generated output
-/public/
-/resources/
-/.hugo_build.lock
-/themes/
-
 # Nuxt generated output
 /.nuxt/
 /.output/

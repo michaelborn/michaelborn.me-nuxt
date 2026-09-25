@@ -13,8 +13,8 @@ usePageSeo({ title: `Posts tagged “${tag}”`, description: `Articles about ${
 </script>
 
 <template>
-  <section>
-    <h1>Posts tagged “{{ tag }}”</h1>
+  <div>
+    <AppHeader class="mb-16" :title="`Posts tagged “${tag}”`" :description="`Articles about ${tag}.`" />
     <PostList :posts="matchingPosts" />
-  </section>
+  </div>
 </template>
