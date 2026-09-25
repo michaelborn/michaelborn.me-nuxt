@@ -1,5 +1,5 @@
 export function recentPosts() {
-  return useAsyncData('published-posts', async () => {
+  return useAsyncData('recent-posts', async () => {
     const posts = await queryCollection('posts')
       .select('path', 'title', 'date', 'tags', 'description')
       .limit(5)
