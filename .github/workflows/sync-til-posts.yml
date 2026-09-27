@@ -1,0 +1,55 @@
+name: Sync today-i-learned posts
+
+on:
+  schedule:
+    # Daily at 10:17 UTC
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-til-posts
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Import new posts from today-i-learned
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Clone today-i-learned
+        run: git clone --filter=blob:none https://github.com/michaelborn/today-i-learned til
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24.20.0"
+
+      - name: Import new posts
+        run: node scripts/sync-til-posts.mjs til content/posts
+
+      - name: Detect new posts
+        id: detect
+        run: echo "count=$(git status --porcelain -- content/posts | wc -l | xargs)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        if: steps.detect.outputs.count != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts
+          git commit -m "Import new posts from today-i-learned"
+          git push
+
+      # A GITHUB_TOKEN push does not trigger other workflows; Netlify still
+      # deploys from the push, but CI checks must be run explicitly.
+      - name: Trigger build workflow
+        if: steps.detect.outputs.count != '0'
+        run: gh workflow run build.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
