@@ -5,7 +5,7 @@ tags: [ 'bash', 'til' ]
 draft: false
 ---
 
-Despite the last 15+ years running Ubuntu as my daily driver, I don't spend much time scripting in Bash. Yesterday while working on a [git release prep skill](../git/git-show-file-from-branch.md), I found myself wondering how to compare version numbers in an inline conditional statement, without resorting to a full `if[...];then...fi` block.
+Despite the last 15+ years running Ubuntu as my daily driver, I don't spend much time scripting in Bash. Yesterday while working on a [git release prep skill](/posts/git-show-file-from-branch/), I found myself wondering how to compare version numbers in an inline conditional statement, without resorting to a full `if[...];then...fi` block.
 
 Well, here it is:
 
