@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test'
 import { readPosts } from '../lib/content'
 
 const posts = readPosts().filter(post => post.published)
+const latestPost = posts[0]
 
 test('static site supports hydrated navigation between articles, tags, and archive', async ({ page }) => {
   const errors: string[] = []
@@ -10,14 +11,15 @@ test('static site supports hydrated navigation between articles, tags, and archi
     if (/hydration/i.test(message.text())) errors.push(message.text())
   })
   await page.goto('/')
-  await expect(page.locator('.post-list li')).toHaveCount(posts.length)
-  await page.getByRole('link', { name: 'Basic Typescript', exact: true }).click()
-  await expect(page).toHaveURL(/\/posts\/basic-typescript\/$/)
-  await expect(page.locator('h1')).toHaveText('Basic Typescript')
-  await expect(page).toHaveTitle('Basic Typescript — Developer Distinction')
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://www.michaelborn.me/posts/basic-typescript/')
-  await page.getByRole('link', { name: 'typescript', exact: true }).click()
-  await expect(page.locator('.post-list li')).toHaveCount(posts.filter(post => post.tags.includes('typescript')).length)
+  await expect(page.locator('.post-list li')).toHaveCount(Math.min(posts.length, 5))
+  await page.getByRole('link', { name: latestPost.title, exact: true }).click()
+  await expect(page).toHaveURL(new URL(latestPost.path, 'http://localhost:4173').href)
+  await expect(page.locator('h1')).toHaveText(latestPost.title)
+  await expect(page).toHaveTitle(`${latestPost.title} — Developer Distinction`)
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://www.michaelborn.me${latestPost.path}`)
+  const tag = latestPost.tags[0]
+  await page.getByRole('link', { name: tag, exact: true }).click()
+  await expect(page.locator('.post-list li')).toHaveCount(posts.filter(post => post.tags.includes(tag)).length)
   await page.getByRole('navigation').getByRole('link', { name: 'Posts', exact: true }).click()
   await expect(page.locator('h1')).toHaveText('All posts')
   await page.getByRole('link', { name: 'CFScript Gotchas and Syntax Guides' }).click()
