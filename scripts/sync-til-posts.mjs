@@ -36,10 +36,10 @@ for (const path of files) {
   const category = dirname(rel) === '.' ? '' : slugTag(basename(dirname(rel)))
   const lines = readFileSync(path, 'utf8').split('\n')
   const headingIndex = lines.findIndex((line) => /^# /.test(line))
-  const title = "TIL: " +
-    (headingIndex === -1
-      ? slug.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase())
-      : lines[headingIndex].slice(2).trim());
+  const title = (headingIndex === -1
+    ? slug.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase())
+    : lines[headingIndex].slice(2).trim())
+    .replace(/^TIL:\s*/i, '');
   const body = lines
     .filter((_, index) => index !== headingIndex)
     .join('\n')
