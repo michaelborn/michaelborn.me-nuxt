@@ -1,5 +1,5 @@
 ---
-title: "TIL: TIL: How to Remove (Unset) an Apt Repository"
+title: "TIL: How to Remove (Unset) an Apt Repository"
 date: '2026-09-25T11:05:46-04:00'
 tags: [ 'apt', 'til' ]
 draft: false

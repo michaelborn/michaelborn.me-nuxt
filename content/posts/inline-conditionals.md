@@ -1,5 +1,5 @@
 ---
-title: "TIL: TIL: Bash Syntax for Inline Conditionals"
+title: "TIL: Bash Syntax for Inline Conditionals"
 date: '2026-09-24T09:36:59-04:00'
 tags: [ 'bash', 'til' ]
 draft: false

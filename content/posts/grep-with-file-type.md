@@ -1,5 +1,5 @@
 ---
-title: "TIL: TIL: How to Grep For a String In .cfc File Type"
+title: "TIL: How to Grep For a String In .cfc File Type"
 date: '2019-08-15T21:14:01-04:00'
 tags: [ 'bash', 'til' ]
 draft: false

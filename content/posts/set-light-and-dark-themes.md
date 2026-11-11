@@ -1,5 +1,5 @@
 ---
-title: "TIL: TIL: Set Light and Dark Ghostty Themes"
+title: "TIL: Set Light and Dark Ghostty Themes"
 date: '2026-09-26T10:01:17-04:00'
 tags: [ 'ghostty', 'til' ]
 draft: false
