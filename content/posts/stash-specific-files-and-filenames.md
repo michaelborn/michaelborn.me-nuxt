@@ -9,7 +9,7 @@ Why would you ever want to stash a specific file, as opposed to any and all alte
 
 See [this question][1], of which the [accepted answer][2] is pretty darn useful:
 
-> Since git 2.13, there is a command to save a specific path to the stash: git stash push <path>. For example: git stash push -m welcome_cart app/views/cart/welcome.thtml.
+> Since git 2.13, there is a command to save a specific path to the stash: `git stash push <path>`. For example: `git stash push -m welcome_cart app/views/cart/welcome.thtml`.
 
 Boom:
 
