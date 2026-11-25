@@ -3,30 +3,18 @@ import { socials } from "#shared/site";
 </script>
 
 <template>
-  <div class="py-8">
-    <!-- Sometime this will shift left and I'll stick something else on the right. 🤷 -->
-    <div>
-      <h2 class="mb-4 text-xs font-semibold uppercase text-gray-400">
-        Find me on
-      </h2>
-      <div class="space-y-5">
-        <NuxtLink
-          v-for="link in socials"
-          :key="link.icon"
-          :to="link.url"
-          target="_blank"
-          external
-          class="group flex items-end gap-4 dark:hover:text-gray-300 dark:text-gray-100"
-        >
-          <span class="text-sm">
-            {{ link.name }}
-          </span>
-          <div
-            class="flex-1 border-b border-dashed border-gray-300 group-hover:border-gray-700 dark:border-gray-800"
-          />
-          <Icon :name="link.icon" class="h-6 w-6" />
-        </NuxtLink>
-      </div>
-    </div>
-  </div>
+  <ul class="flex items-center gap-1">
+    <li v-for="link in socials" :key="link.icon">
+      <a
+        :href="link.url"
+        target="_blank"
+        rel="noopener"
+        :title="link.name"
+        class="flex items-center px-2 py-2 text-gray-400 transition hover:text-primary-600 dark:text-gray-500 dark:hover:text-primary-400"
+      >
+        <Icon :name="link.icon" aria-hidden="true" class="h-5 w-5" />
+        <span class="sr-only">{{ link.name }}</span>
+      </a>
+    </li>
+  </ul>
 </template>

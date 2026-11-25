@@ -7,23 +7,13 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div class="flex min-h-screen flex-col">
     <NuxtLoadingIndicator color="#14b8a6" />
     <AppNavbar />
-    <div class="h-32" />
-    <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <main class="mx-auto w-full max-w-4xl flex-1 px-4 py-16 sm:px-6 lg:px-8">
       <NuxtPage />
     </main>
-    <div class="h-32" />
-    <footer
-      class="mx-auto max-w-md px-4 pb-8 text-sm text-gray-400 sm:px-6 lg:px-8 dark:text-gray-600"
-    >
-      <FooterSocialLinks />
-      <FooterCopyright />
-      <div class="pb-8 pt-4">
-        <FooterAiPolicy />
-      </div>
-    </footer>
+    <AppFooter />
   </div>
 </template>
 
