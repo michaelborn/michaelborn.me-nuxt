@@ -32,11 +32,7 @@ draft: false
 ---
 ```
 
-Tags use lowercase, hyphenated URL slugs. Dates require an explicit timezone.
-Drafts and future-dated posts are excluded at build time, including from the
-downloadable content database. Scheduled posts need a new build after their
-publication time. Restart `npm run dev` after changing draft status or publication
-dates so the collection's inclusion rules are recalculated.
+Tags use lowercase, hyphenated URL slugs. Dates require an explicit timezone. Drafts and future-dated posts are excluded at build time, including from the downloadable content database. Scheduled posts need a new build after their publication time. Restart `npm run dev` after changing draft status or publication dates so the collection's inclusion rules are recalculated.
 
 ## Local checks
 
