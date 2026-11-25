@@ -6,6 +6,9 @@ const publishedPosts = readPosts().filter(post => post.published)
 const tags = [...new Set(publishedPosts.flatMap(post => post.tags))].sort()
 
 export default defineNuxtConfig({
+  typescript: {
+    typeCheck: true,
+  },
   modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxt/icon', '@nuxt/fonts'],
   css: ['~/assets/css/main.css'],
   // Hugo's ignored public/ folder contains old HTML, not source assets.
