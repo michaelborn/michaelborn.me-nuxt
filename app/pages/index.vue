@@ -1,5 +1,6 @@
 <script setup lang="ts">
-usePageSeo({ title: "Developer Distinction" });
+usePageSeo({ title: "Software Engineer" });
+usePersonJsonLd();
 </script>
 
 <template>

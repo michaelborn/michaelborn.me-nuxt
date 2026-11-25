@@ -5,6 +5,7 @@ const items = [
   { name: "Home", path: "/", icon: "solar:home-smile-outline" },
   { name: "Posts", path: "/posts/", icon: "solar:document-text-outline" },
   { name: "Tags", path: "/tags/", icon: "solar:hashtag-outline" },
+  { name: "About", path: "/about/", icon: "solar:user-outline" },
 ];
 
 const stripSlash = (path: string) => path.replace(/\/$/, "") || "/";

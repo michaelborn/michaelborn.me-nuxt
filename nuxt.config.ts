@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     prerender: {
       failOnError: true,
       routes: [
-        '/', '/posts/', '/tags/',
+        '/', '/posts/', '/tags/', '/about/',
         ...publishedPosts.map(post => post.path),
         ...tags.map(tag => `/tags/${tag}/`),
         '/index.xml', '/posts/index.xml', '/tags/index.xml',

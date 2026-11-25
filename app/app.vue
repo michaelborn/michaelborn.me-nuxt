@@ -2,6 +2,7 @@
 useHead({
   htmlAttrs: { class: "h-full scroll-smooth" },
   bodyAttrs: { class: "antialiased bg-gray-50 dark:bg-black min-h-screen" },
+  link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
 });
 </script>
 
@@ -19,6 +20,9 @@ useHead({
     >
       <FooterSocialLinks />
       <FooterCopyright />
+      <div class="pb-8 pt-4">
+        <FooterAiPolicy />
+      </div>
     </footer>
   </div>
 </template>

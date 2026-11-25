@@ -2,7 +2,7 @@
 import type { NuxtError } from '#app'
 
 defineProps<{ error: NuxtError }>()
-useHead({ title: 'Page unavailable — Developer Distinction' })
+useHead({ title: 'Page unavailable — Software Engineer' })
 useSeoMeta({ robots: 'noindex' })
 </script>
 
