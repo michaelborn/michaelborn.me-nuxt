@@ -36,14 +36,14 @@ For a full reference, check out [Limit expensive queries](https://www.elastic.co
 * Properly tune your shard count and shard/replica ratio to account for your document count, index size, and scaling needs. See [Size your Elasticsearch shards](https://www.elastic.co/docs/deploy-manage/production-guidance/optimize-performance/size-shards)
 * Avoid increasing [`index.max_result_window`](https://www.elastic.co/docs/reference/elasticsearch/index-settings/index-modules#index-max-result-window)
 * Adjust [`index.refresh_interval`](https://www.elastic.co/docs/reference/elasticsearch/index-settings/index-modules#dynamic-index-settings) to the maximum duration you can allow stale results.
-* Adjust [`indices.fielddata.cache.size`](https://www.elastic.co/docs/reference/elasticsearch/configuration-reference/field-data-cache-settings) to allow unbounded field cache growth.
+* Adjust [`indices.fielddata.cache.size`](https://www.elastic.co/docs/reference/elasticsearch/configuration-reference/field-data-cache-settings) to prevent unbounded field cache growth.
 
 Again, this is an intentionally short list of what I consider the "low hanging fruit" of optimizing ES read performance.
 
 ## Hardware and Cluster Design
 
 * Make sure your [cluster health is green](https://www.elastic.co/docs/api/elasticsearch/operation/operation-health-report), meaning all shards (including replicas) are allocated. 
-* Watch your node heap size - it should be at least 50% of available RAM, but not so large it starves the OS. (Watch for OOM exceptions.) See [Elasticsearch heap size usage and JVM garbage collection](https://www.elastic.co/search-labs/blog/elasticsearch-heap-size-jvm-garbage-collection).
+* Watch your node heap size - ES recommends *at most* 50% of available RAM too avoid starving the OS. (Watch for OOM exceptions.) See [Elasticsearch heap size usage and JVM garbage collection](https://www.elastic.co/search-labs/blog/elasticsearch-heap-size-jvm-garbage-collection).
 * Have [dedicated ingest nodes, and dedicated search nodes](https://www.elastic.co/docs/deploy-manage/distributed-architecture/clusters-nodes-shards/node-roles).
 * Make sure your ingest payloads are tuned to match the node RAM and CPU resources.
 * Ensure [`search.allow_expensive_queries`](https://www.elastic.co/docs/reference/query-languages/querydsl#query-dsl-allow-expensive-queries) is enabled in the cluster settings.
